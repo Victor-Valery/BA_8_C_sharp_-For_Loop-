@@ -49,14 +49,13 @@ namespace BA_C_SHARP_8__For_Loop_
                 x++;
             }
 
-
             //  Örnek - 3: 1 ile 100 arasindaki tek ve cift sayilari bulan bir algoritma
 
             for (int i = 0; i < 100; i++)
             {
-                if (i%2==0)
+                if (i % 2 == 0)
                 {
-                    Console.WriteLine(i +"Cifttir");
+                    Console.WriteLine(i + "Cifttir");
                 }
 
                 else
@@ -64,9 +63,7 @@ namespace BA_C_SHARP_8__For_Loop_
                     Console.WriteLine(i + "Tektir");
                 }
 
-
             }
-
 
 
             // Örnek - 4: kullanicidan sayi al. Alinan sayi kadar olan rakamlarin toplamini bul. 
@@ -75,45 +72,89 @@ namespace BA_C_SHARP_8__For_Loop_
             while (true)
             {
 
-            int toplam = 0;
+                int toplam = 0;
 
-            Console.WriteLine("Lütfen bir tam sayi giriniz: ");
-            int sayi = int.Parse(Console.ReadLine());
+                Console.WriteLine("Lütfen bir tam sayi giriniz: ");
+                int sayi = int.Parse(Console.ReadLine());
 
-            for (int i = 0; i <= sayi; i++)
-            {
-                toplam = toplam + i; // toplam +=i; seklinde de yazilabilir.
+                for (int i = 0; i <= sayi; i++)
+                {
+                    toplam = toplam + i; // toplam +=i; seklinde de yazilabilir.
+                }
+
+                Console.WriteLine("TOPLAM = " + toplam);
+
             }
-
-            Console.WriteLine("TOPLAM = " + toplam);
-
-            }
-
 
             //*****************
 
-            int x = 3;
+            int y = 3;
             string kullaniciAdi = "Admin";
 
-            while (x>0)
+            while (y > 0)
             {
                 Console.WriteLine("Kullanici adini giriniz");
                 string ekranKullanici = Console.ReadLine();
 
-                if (kullaniciAdi==ekranKullanici)
+                if (kullaniciAdi == ekranKullanici)
                 {
                     Console.WriteLine("Hosgeldiniz");
+                    break;
                 }
                 else
                 {
                     Console.WriteLine("Yanlis giris yapildi");
                     x--;
                     Console.WriteLine("Su anda" + x + "hakkiniz kaldi");
+                    if (y == 0)
+                    {
+                        Console.WriteLine("Hesanbiniz Kilitlendi");
+                    }
+
+                }
+
+            }
+
+            int sayac = 3;
+            string kullaniciAdi2 = "Admin";
+
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine("Kullanici adini giriniz");
+                string ekranKullanici = Console.ReadLine();
+
+                if (kullaniciAdi2 == ekranKullanici)
+                {
+                    Console.WriteLine("Hosgeldiniz");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Yanlis giris yapildi");
+                    sayac--;
+                    Console.WriteLine("Su anda" + sayac + "hakkiniz kaldi");
+                    if (sayac == 0)
+                    {
+                        Console.WriteLine("Hesanbiniz Kilitlendi");
+
+                    }
                 }
             }
-            Console.WriteLine("Hesanbiniz Kilitlendi");
 
+            // ÖRNEK - 6: Faktoriyel
+            // 7 sayisinin Faktoriyeli
+            // Kullanicidan sayi alin
+            // Bu sayinin Faktöriyelini hesaplayin
 
+            int sepet2 = 1;
+            Console.WriteLine("Faktoriyelini bulmak istediginiz sayiyi giriniz ");
+            int faktoriyel = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= faktoriyel; i++)
+            {
+                sepet2 = sepet2 * i;
+            }
+            Console.WriteLine($"{faktoriyel} sayisinin faktoriyeli = {sepet2}");
 
 
 
@@ -121,3 +162,10 @@ namespace BA_C_SHARP_8__For_Loop_
         }
     }
 }
+
+
+
+
+
+
+
